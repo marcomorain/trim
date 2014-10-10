@@ -8,19 +8,25 @@ The intended use is as part of a unix pipeline.
 
 # Usage
 
+```
+$ cat test/copter.in
+     ROFL:ROFL:ROFL:ROFL
+          ____^____
+ L     __/      [x]\
+LOL====__           \
+ L       \__________]
+           I      I
+          ----------/
+```
 
 ```
-$ ps
-  PID TTY           TIME CMD
- 7936 ttys000    0:00.01 -/bin/bash
- 8019 ttys000    0:00.68 vim README.md
- 7973 ttys001    0:00.18 -/bin/bash
- 8029 ttys002    0:00.01 -/bin/bash
+$ cat test/copter.in | trim
+ROFL:ROFL:ROFL:ROFL
+____^____
+L     __/      [x]\
+LOL====__           \
+L       \__________]
+I      I
+----------/
 
-$ ps | trim
-PID TTY           TIME CMD
-7936 ttys000    0:00.01 -/bin/bash
-8019 ttys000    0:00.68 vim README.md
-7973 ttys001    0:00.18 -/bin/bash
-8029 ttys002    0:00.01 -/bin/bash
 ```
